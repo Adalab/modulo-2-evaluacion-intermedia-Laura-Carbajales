@@ -9,7 +9,7 @@ body {
   }
 .container {
       height: 400px;
-      width: 500px;
+      width: 600px;
       border: 2px solid green;
       border-radius: 5px;
       display: flex;
@@ -58,6 +58,16 @@ body {
     border: 2px solid rgb(18, 201, 161);
     background-color: white;
     color: rgb(18, 201, 161);
+}
+.buttonReset{
+    margin-left: 5px;
+    background-color: rgb(18, 201, 161); 
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    width: 120px;
+    border: 2px solid grey;
+    border-radius: 5px;
 }
 .result{
     background-color: rgb(18, 201, 161); 
