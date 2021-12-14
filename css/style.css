@@ -61,18 +61,18 @@ body {
 }
 .buttonReset{
     margin-left: 5px;
-    background-color: green; 
+    background-color: rgb(18, 201, 161); 
     color: white;
     font-size: 14px;
     padding: 5px;
     width: 120px;
-    border: 2px solid green;
+    border: 2px solid rgb(18, 201, 161);
     border-radius: 5px;
 }
 .buttonReset:hover{
-    border: 2px solid green;
+    border: 2px solid rgb(18, 201, 161);
     background-color: white;
-    color: green;
+    color: rgb(18, 201, 161);
 }
 .result{
     background-color: rgb(18, 201, 161); 
