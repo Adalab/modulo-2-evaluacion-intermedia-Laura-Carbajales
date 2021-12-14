@@ -69,3 +69,6 @@ body {
 .counter{
     color: grey;
 }
+.hidden {
+    display: none;
+}

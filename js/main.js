@@ -10,6 +10,7 @@ const textResult = document.querySelector('.js-result');
 const userCounter = document.querySelector('.js-userCounter');
 //Contador computadora
 const computerCounter = document.querySelector('.js-computerCounter');
+const resetButton = document.querySelector('.js-reset');
 //
 let totalCounter = 0;
 
@@ -87,7 +88,7 @@ function updateCounter(userResult) {
   }
 }
 
-function resetGame() {
+function handleResetClick() {
   totalCounter = 0;
   countUserResult = 0;
   countComputerResult = 0;
@@ -95,6 +96,23 @@ function resetGame() {
   computerCounter.innerHTML = `Computadora: ${countComputerResult}`;
   textResult.innerHTML = 'Vamos a jugar!';
   userSelect.value = 'choose';
+  button.classList.remove('hidden');
+  resetButton.classList.add('hidden');
+}
+
+/*function resetGame() {
+  totalCounter = 0;
+  countUserResult = 0;
+  countComputerResult = 0;
+  userCounter.innerHTML = `Jugador: ${countUserResult}`;
+  computerCounter.innerHTML = `Computadora: ${countComputerResult}`;
+  textResult.innerHTML = 'Vamos a jugar!';
+  userSelect.value = 'choose';
+}*/
+
+function showResetButton() {
+  button.classList.add('hidden');
+  resetButton.classList.remove('hidden');
 }
 
 //Handler
@@ -107,9 +125,10 @@ function handleClickPlay(event) {
   updateCounter(result);
   totalCounter++;
   if (totalCounter >= 10) {
-    resetGame();
+    showResetButton();
   }
 }
 
 //Listener
 button.addEventListener('click', handleClickPlay);
+resetButton.addEventListener('click', handleResetClick);
